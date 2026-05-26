@@ -60,3 +60,12 @@ func _on_start_timer_timeout():
 	$MobTimer.start()
 	$ScoreTimer.start()
 	# .start() Starts the timer, or resets the timer if it was started already
+
+# ==================================================================================================
+
+
+func _ready():
+	new_game()
+	
+#func _process(delta):
+	#pass
