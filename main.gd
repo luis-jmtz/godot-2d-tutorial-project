@@ -64,8 +64,9 @@ func _on_start_timer_timeout():
 # ==================================================================================================
 
 
-func _ready():
-	new_game()
+func _ready() -> void:
+	# new_game()
+	pass # Replace with function body.
 	
 #func _process(delta):
 	#pass
