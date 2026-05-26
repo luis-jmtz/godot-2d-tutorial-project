@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c1wdmrmv6spvx"]
+
+[ext_resource type="Script" uid="uid://mx14i32ik5ls" path="res://mob.gd" id="1_dy6sc"]
+
+[node name="Mob" type="RigidBody2D" unique_id=1723833260]
+script = ExtResource("1_dy6sc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1440384736]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1644625317]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=848604529]
