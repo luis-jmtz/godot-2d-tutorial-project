@@ -30,3 +30,18 @@ func _process(delta: float) -> void:
 	# updating player position and clamping it to keep it in-bounds
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+	
+	# play correct animation
+	if velocity.x != 0:
+		$AnimatedSprite2D.animation = "walk"
+		$AnimatedSprite2D.flip_v = false
+		
+		# flips the animation if moving left
+		$AnimatedSprite2D.flip_h = velocity.x < 0 # velocity.x < 0 is a boolean that returns true or false
+		# when x velocity is less than 0 (moving zero), it returns true, so flip_h (flip horizontal) is true.
+		
+	elif velocity.y != 0:
+		$AnimatedSprite2D.animation = "up"
+		$AnimatedSprite2D.flip_v = velocity.y > 0
+		
+		
