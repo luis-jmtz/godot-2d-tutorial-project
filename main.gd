@@ -12,6 +12,9 @@ func game_over():
 	$MobTimer.stop()
 	
 	$HUD.show_game_over()
+	
+	$Music.stop()
+	$DeathSound.play()
 
 
 func new_game():
@@ -24,6 +27,8 @@ func new_game():
 	
 	# gets rid of mobs in scene when starting a new game
 	get_tree().call_group("mobs","queue_free")
+	
+	$Music.play()
 
 
 # ====================================== Timer Timeouts =========================================================
