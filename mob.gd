@@ -2,7 +2,7 @@ extends RigidBody2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready():
 	# gets list of all animation names
 	var mob_types = Array($AnimatedSprite2D.sprite_frames.get_animation_names())
 	
