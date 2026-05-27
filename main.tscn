@@ -15,7 +15,16 @@ point_count = 5
 script = ExtResource("1_0xm2m")
 mob_scene = ExtResource("2_h2yge")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=833234572]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.69803923, 0.7764706, 0.8352941, 1)
+
 [node name="Player" parent="." unique_id=1607886031 instance=ExtResource("1_ig7tw")]
+visible = false
 
 [node name="MobTimer" type="Timer" parent="." unique_id=1464445810]
 wait_time = 0.5
@@ -27,12 +36,15 @@ wait_time = 2.0
 one_shot = true
 
 [node name="StartPosition" type="Marker2D" parent="." unique_id=1326901014]
+visible = false
 position = Vector2(263, 302)
 
 [node name="MobPath" type="Path2D" parent="." unique_id=1422714913]
+visible = false
 curve = SubResource("Curve2D_ig7tw")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" unique_id=990245335]
+visible = false
 
 [node name="HUD" parent="." unique_id=1464360761 instance=ExtResource("4_1bvp3")]
 
