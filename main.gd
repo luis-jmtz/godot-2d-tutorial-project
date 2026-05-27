@@ -10,12 +10,17 @@ var score
 func game_over():
 	$ScoreTimer.stop()
 	$MobTimer.stop()
+	
+	$HUD.show_game_over()
 
 
 func new_game():
 	score = 0
 	$Player.start($StartPosition.position) # start is a function from player
 	$StartTimer.start()
+	
+	$HUD.update_score(score)
+	$HUD.show_message("Get Ready")
 
 
 # ====================================== Timer Timeouts =========================================================
@@ -53,6 +58,7 @@ func _on_mob_timer_timeout(): # wait time = 0.5
 
 func _on_score_timer_timeout():
 	score += 1 # after 1 seconds (Inspector: Wait Time) increase score by 1
+	$HUD.update_score(score)
 
 
 # after 2 seconds the game turns on mob spawning with the MobTimer and the score counting with ScoreTimer
